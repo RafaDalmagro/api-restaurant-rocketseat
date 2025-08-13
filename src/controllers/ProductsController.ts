@@ -3,7 +3,7 @@ import { z } from "zod";
 import { db } from "@/database/knex.js";
 import { AppError } from "@/utils/AppError.js";
 
-class ProductController {
+class ProductsController {
     async index(req: Request, res: Response, next: NextFunction) {
         try {
             const { name } = req.query;
@@ -109,4 +109,4 @@ class ProductController {
     }
 }
 
-export { ProductController };
+export { ProductsController };
