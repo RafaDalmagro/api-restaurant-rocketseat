@@ -3,6 +3,8 @@ import { TablesSessionsController } from "../controllers/TablesSessionsControlle
 const tablesSessionsRoutes = Router();
 const tableSessionsController = new TablesSessionsController();
 
+tablesSessionsRoutes.get("/", tableSessionsController.index);
 tablesSessionsRoutes.post("/", tableSessionsController.create);
+tablesSessionsRoutes.patch("/:id", tableSessionsController.update);
 
 export { tablesSessionsRoutes };
